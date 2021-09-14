@@ -1,14 +1,9 @@
 package com.begin.gulimall.order.config;
 
-import com.begin.gulimall.order.entity.OrderEntity;
-import com.rabbitmq.client.Channel;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.springframework.amqp.core.*;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
