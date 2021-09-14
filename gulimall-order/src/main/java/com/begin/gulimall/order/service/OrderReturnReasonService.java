@@ -1,0 +1,20 @@
+package com.begin.gulimall.order.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.begin.gulimall.common.utils.PageUtils;
+import com.begin.gulimall.order.entity.OrderReturnReasonEntity;
+
+import java.util.Map;
+
+/**
+ * 退货原因
+ *
+ * @author zzg
+ * @email 834561898@gmail.com
+ * @date 2021-08-07 17:21:37
+ */
+public interface OrderReturnReasonService extends IService<OrderReturnReasonEntity> {
+
+    PageUtils queryPage(Map<String, Object> params);
+}
+

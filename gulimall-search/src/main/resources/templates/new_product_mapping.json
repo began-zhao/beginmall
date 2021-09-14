@@ -1,0 +1,74 @@
+# 查看原来的映射规则
+GET gulimall_product/_mapping
+# 修改为新的映射 并创建新的索引，下面进行数据迁移
+PUT /mall_product
+{
+"mappings": {
+"properties": {
+"skuId": {
+"type": "long"
+},
+"spuId": {
+"type": "long"
+},
+"skuTitle": {
+"type": "text",
+"analyzer": "ik_smart"
+},
+"skuPrice": {
+"type": "keyword"
+},
+"skuImg": {
+"type": "keyword"
+},
+"saleCount": {
+"type": "long"
+},
+"hosStock": {
+"type": "boolean"
+},
+"hotScore": {
+"type": "long"
+},
+"brandId": {
+"type": "long"
+},
+"catalogId": {
+"type": "long"
+},
+"brandName": {
+"type": "keyword"
+},
+"brandImg": {
+"type": "keyword"
+},
+"catalogName": {
+"type": "keyword"
+},
+"attrs": {
+"type": "nested",
+"properties": {
+"attrId": {
+"type": "long"
+},
+"attrName": {
+"type": "keyword"
+},
+"attrValue": {
+"type": "keyword"
+}
+}
+}
+}
+}
+}
+# 数据迁移
+POST _reindex
+{
+"source": {
+"index": "gulimall_product"
+},
+"dest": {
+"index": "mall_product"
+}
+}

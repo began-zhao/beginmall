@@ -1,0 +1,7 @@
+#sentinel配置
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8333
+        port: 8719    #与其他微服务进行传输的端口
