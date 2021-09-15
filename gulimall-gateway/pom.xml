@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-         <groupId>com.begin.mall</groupId>
-         <artifactId>guli-mall</artifactId>
-         <version>0.0.1-SNAPSHOT</version>
+        <groupId>com.begin.mall</groupId>
+        <artifactId>guli-mall</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-     <groupId>com.begin.mall</groupId>
+    <groupId>com.begin.mall</groupId>
     <artifactId>gulimall-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-gateway</name>
@@ -40,13 +40,19 @@
             <version>3.0.2</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -13,7 +13,7 @@
     <name>gulimall-search</name>
     <description>检索服务</description>
     <properties>
-        <elasticsearch.version>7.4.2</elasticsearch.version>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
     </properties>
     <dependencies>
         <dependency>
@@ -24,7 +24,7 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>7.4.2</version>
+            <version>7.12.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

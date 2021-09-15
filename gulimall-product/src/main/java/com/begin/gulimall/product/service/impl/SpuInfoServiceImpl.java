@@ -16,6 +16,7 @@ import com.begin.gulimall.product.service.*;
 import com.begin.gulimall.product.vo.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -59,6 +60,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     SkuSaleAttrValueService skuSaleAttrValueService;
 
     @Autowired
+    @Lazy
     CouponFeignService couponFeignService;
     @Autowired
     BrandService brandService;
@@ -67,9 +69,11 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     CategoryService categoryService;
 
     @Autowired
+    @Lazy
     WareFeignService wareFeignService;
 
     @Autowired
+    @Lazy
     SearchFeignService searchFeignService;
 
     @Override

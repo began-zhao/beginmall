@@ -11,6 +11,7 @@ import com.begin.gulimall.product.vo.SkuItemSaleAttrVo;
 import com.begin.gulimall.product.vo.SkuItemVo;
 import com.begin.gulimall.product.vo.SpuItemAttrGroupVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -51,7 +52,8 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
 
     @Autowired
     ThreadPoolExecutor executor;
-    @Autowired
+    @Resource
+    @Lazy
     SeckillFeignServer seckillFeignServer;
 
 

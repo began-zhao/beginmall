@@ -6,6 +6,7 @@ import java.util.Map;
 import com.begin.gulimall.product.feign.CouponFeignService;
 import com.begin.gulimall.product.vo.SpuSaveVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.*;
 
 import com.begin.gulimall.product.entity.SpuInfoEntity;
@@ -29,6 +30,7 @@ public class SpuInfoController {
     private SpuInfoService spuInfoService;
 
     @Autowired
+    @Lazy
     private CouponFeignService couponFeignService;
     @GetMapping("/test")
     public R test(){
