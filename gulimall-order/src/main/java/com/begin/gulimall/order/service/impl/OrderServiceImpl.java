@@ -271,7 +271,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
                 //TODO 定期扫描数据库，将失败的消息重新发送
                 rabbitTemplate.convertAndSend("order-event-exchange", "order.release.other", orderTo);
             } catch (AmqpException e) {
-                //TODO 将没发送成功的消息尽心重试发送
+                //TODO 将没发送成功的消息进行重试发送
 
             }
         }
